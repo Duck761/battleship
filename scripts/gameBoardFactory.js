@@ -1,6 +1,6 @@
-const shipFactory = require('./Ship')
+import { shipFactory } from './shipFactory.js';
 
-const gameBoardFactory = () => {
+export const gameBoardFactory = () => {
   let board = [];
   let ships = [];
   //Initialize board
@@ -79,5 +79,3 @@ const gameBoardFactory = () => {
 
   return { board, getBoard, ships, placeShip, placeAttack, areAllShipsSunk };
 };
-
-module.exports = gameBoardFactory;
